@@ -1,17 +1,22 @@
 #Ryan Cox
 #02/12/14
-#Write and test a function OutputSymbols, which takes two parameters: an integer n and a character symbol. The function is to display, on the same line, the symbol n times.
+#Takes an integer n and a character symbol and displays it on the same line, the symbol n times.
 
+import sys
 
-n = int(input("Please enter the number of repeats: "))
-character = input("please eneter the character: ")
+def information():
+    n = int(input("Please enter the number of repeats: "))
+    character = input("please enter the character: ")
+    return character, n
 
-
-for loops in range(n):
-    print(character)
+def loop(character, n):
+    for loops in range(n):
+        print(character, end="") 
 
 def engine():
+    character, n = information()
+    loop(character, n)
 
 #Main Program
 
-engine():
+engine()
